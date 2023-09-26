@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 
 export const container = css`
-  background-color: #eef2f6;
   color: #000;
   font-family: Roboto, sans-serif;
   width: 100vw;
@@ -10,22 +9,15 @@ export const container = css`
   flex-flow: row wrap;
   direction: ltr;
   overflow: auto;
-
-  .h3,
-  h4 {
-    margin: 0;
-  }
-
-  ul {
-    padding: 0;
-  }
+  flex-direction: column;
 `;
 
 export const card = css`
   display: flex;
   flex-direction: column;
-  margin-top: 5vh;
-  padding: 50px;
+  row-gap: 74px;
+  position: relative;
+  bottom: 5vh;
 `;
 
 export const input = css`

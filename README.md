@@ -1,4 +1,4 @@
-## Octup home assignment 
+## Justt home assignment 
 
 💻 Built with React | TypeScript | MUI | CSS Emotion .
 

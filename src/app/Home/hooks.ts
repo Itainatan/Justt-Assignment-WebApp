@@ -12,19 +12,15 @@ const useHome = () => {
   const onSubmit = useCallback(async () => {
     try {
       // setIsLoading(true);
-
       // const { search } = getValues();
-
       // const { data }: any = await axios.get(
       //   `${API_URL}/get-superhero/${search}`
       // );
-
       // if (data.response === "error") {
       //   toast.error(data.error);
       // } else {
       //   setHistory([...history, ...data.results]);
       // }
-
       // setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -32,10 +28,9 @@ const useHome = () => {
     }
   }, [history]);
 
-  
   return {
-    // onSubmit: handleSubmit(onSubmit),
-
+    mode,
+    setMode,
   };
 };
 

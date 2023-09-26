@@ -2,13 +2,14 @@ import { SerializedStyles } from "@emotion/react";
 import Toast from "@src/common-components/Toast";
 import * as styles from "./styles";
 import Home from "@src/app/Home";
+import { Box } from "@mui/material";
 
 function App() {
   return (
-    <div css={styles.container}>
+    <Box css={styles.container}>
       <Toast />
       <Home />
-    </div>
+    </Box>
 
   );
 }

@@ -1,24 +1,29 @@
-import { Button, CardMedia, CircularProgress, Toolbar, Typography } from "@mui/material";
-import TextField from "@mui/material/TextField";
+import { Box, Button, CardMedia, CircularProgress, Toolbar, Typography } from "@mui/material";
 import * as styles from "./styles";
 import useHome from "./hooks";
 import { PrimaryImage } from "@src/common-components/PrimaryImage";
+import { Title } from "@src/common-components/Title";
+import Buttons from "./components/Buttons";
+import { MODE } from "../types";
+import Browse from "../Browse";
+import Search from "../Search";
 
 export default function Home() {
-  const {  } = useHome();
+  const { mode, setMode } = useHome();
 
   return (
-    <div css={styles.container}>
-     <PrimaryImage />
+    <Box css={styles.container}>
+      <PrimaryImage />
 
-      <Title />
-
-      <Buttons onClick={} />
+      <Box css={styles.card}>
+        <Title />
+        <Buttons mode={mode} onClick={setMode} />
+      </Box>
 
       {
-
+        mode === MODE.Browse ? <Browse /> : <Search />
       }
-    </div>
+    </Box>
   );
 };
 

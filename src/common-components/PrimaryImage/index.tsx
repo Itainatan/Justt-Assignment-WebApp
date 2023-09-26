@@ -1,11 +1,15 @@
-import { CardMedia } from "@mui/material";
+import { Box, CardMedia } from "@mui/material";
+import * as styles from './styles';
+import background from '../../assets/background.png'
 
 export function PrimaryImage() {
     return (
-        <CardMedia
-            sx={{ height: 140 }}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="rick and morty"
-        />
+        <Box css={styles.container}>
+            <CardMedia
+                css={styles.image}
+                image={background}
+                title="rick and morty"
+            />
+        </Box>
     )
 }
