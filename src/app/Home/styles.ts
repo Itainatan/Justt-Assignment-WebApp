@@ -6,7 +6,7 @@ export const container = css`
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   direction: ltr;
   overflow: auto;
   flex-direction: column;
@@ -17,7 +17,9 @@ export const card = css`
   flex-direction: column;
   position: relative;
   bottom: 5vh;
+  row-gap: 48px;
 `;
 
 export const main = css`
+  padding: 0 20%;
 `;

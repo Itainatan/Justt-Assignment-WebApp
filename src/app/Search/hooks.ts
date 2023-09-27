@@ -24,7 +24,7 @@ export default function useSearch() {
       setIsLoading(false);
     } catch (error) {
       console.log(error);
-      toast.error("an error, please try again");
+      toast.error("player not exist");
       setIsLoading(false);
     }
   }, [id]);

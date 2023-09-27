@@ -18,14 +18,15 @@ export default function Home() {
       <Box css={styles.card}>
         <Title />
         <Buttons mode={mode} onClick={setMode} />
-        {
-          mode === MODE.Browse ? <Browse /> : <Search />
-        }
+        <Box css={styles.main}>
+          {
+            mode === MODE.Browse ? <Browse /> : <Search />
+
+          }
+        </Box>
       </Box>
 
-      {/* <Box css={styles.main}>
-       
-      </Box> */}
+
     </Box>
   );
 };
