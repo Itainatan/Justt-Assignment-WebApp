@@ -1,6 +1,6 @@
 import { Box, CardMedia } from "@mui/material";
 import * as styles from './styles';
-import background from '../../assets/background.png'
+import background from '../../assets/background.png';
 
 export function PrimaryImage() {
     return (

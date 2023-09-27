@@ -10,8 +10,8 @@ export default function Buttons({ mode, onClick }: Props) {
 
   return (
     <Box css={styles.container}>
-      <Button css={[styles.button(true), mode === MODE.Browse && styles.selectedButton]}>Browse</Button>
-      <Button css={[styles.button(false), mode === MODE.Search && styles.selectedButton]}>Pick a character</Button>
+      <Button onClick={() => onClick(MODE.Browse)} css={[styles.button(true), mode === MODE.Browse && styles.selectedButton]}>Browse</Button>
+      <Button onClick={() => onClick(MODE.Search)} css={[styles.button(false), mode === MODE.Search && styles.selectedButton]}>Pick a character</Button>
     </Box>
   );
 }

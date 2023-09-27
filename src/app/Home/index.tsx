@@ -1,4 +1,4 @@
-import { Box, Button, CardMedia, CircularProgress, Toolbar, Typography } from "@mui/material";
+import { Box, } from "@mui/material";
 import * as styles from "./styles";
 import useHome from "./hooks";
 import { PrimaryImage } from "@src/common-components/PrimaryImage";
@@ -20,9 +20,11 @@ export default function Home() {
         <Buttons mode={mode} onClick={setMode} />
       </Box>
 
-      {
-        mode === MODE.Browse ? <Browse /> : <Search />
-      }
+      <Box css={styles.main}>
+        {
+          mode === MODE.Browse ? <Browse /> : <Search />
+        }
+      </Box>
     </Box>
   );
 };
