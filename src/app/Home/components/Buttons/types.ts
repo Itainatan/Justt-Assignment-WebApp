@@ -1,4 +1,4 @@
-import { MODE } from "@src/app/types";
+import { MODE } from "../../constants";
 
 type Props = {
   mode: MODE;

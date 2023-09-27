@@ -1,10 +1,8 @@
-enum MODE {
-  Browse = 'browse',
-  Search = 'search'
+type Player = {
+  [key: string]: string;
 };
 
-export { MODE };
-
+export type { Player };
 
 // type Biography = {
 //   ["full-name"]: string;
@@ -13,4 +11,3 @@ export { MODE };
 //   ["first-appearance"]: string;
 //   [key: string]: string;
 // };
-

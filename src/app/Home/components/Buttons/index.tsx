@@ -3,8 +3,8 @@ import {
   Button,
 } from "@mui/material";
 import * as styles from "./styles";
-import { MODE } from "@src/app/types";
 import { Props } from "./types";
+import { MODE } from "../../constants";
 
 export default function Buttons({ mode, onClick }: Props) {
 

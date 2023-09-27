@@ -2,9 +2,10 @@ import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { API_URL } from "../constants";
 import { toast } from "react-toastify";
+import { Player } from "../types";
 
 export default function useSearch() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Player | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [id, setId] = useState<string>("");
 

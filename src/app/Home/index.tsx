@@ -4,9 +4,9 @@ import useHome from "./hooks";
 import { PrimaryImage } from "@src/common-components/PrimaryImage";
 import { Title } from "@src/common-components/Title";
 import Buttons from "./components/Buttons";
-import { MODE } from "../types";
 import Browse from "../Browse";
 import Search from "../Search";
+import { MODE } from "../constants";
 
 export default function Home() {
   const { mode, setMode } = useHome();
