@@ -6,6 +6,8 @@ export const container = css`
   height: 107px;
   align-items: center;
   column-gap: 20px;
+  background: #efeff4;
+  width: 100%;
 `;
 
 export const input = css`

@@ -1,6 +1,12 @@
 import { css } from "@emotion/react";
 
-export const container = css``;
+export const container = css`
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+`;
 
 export const searchIcon = css`
   width: 196px;

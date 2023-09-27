@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 export const container = css`
   display: flex;
   justify-content: center;
+  margin-bottom: 48px;
 `;
 
 export const button = (isFirst: boolean) => css`

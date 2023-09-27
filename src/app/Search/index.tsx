@@ -8,7 +8,7 @@ export default function Search() {
     const { setId } = useSearch();
 
     return (
-        <Box>
+        <Box css={styles.container}>
             <SearchField onSubmit={setId} placeholder="Search for character I.d" />
             <CardMedia
                 css={styles.searchIcon}
