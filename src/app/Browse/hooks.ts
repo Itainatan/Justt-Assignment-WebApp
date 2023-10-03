@@ -10,7 +10,7 @@ export default function useBrowse() {
   const [searchName, setSearchName] = useState<string>("");
 
   useEffect(() => {
-    fetchData();
+    !isLoading && fetchData();
   }, [page, searchName]);
 
   const fetchData = useCallback(async () => {

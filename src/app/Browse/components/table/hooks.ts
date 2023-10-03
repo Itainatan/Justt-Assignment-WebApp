@@ -1,18 +1,12 @@
 import { Player } from "@src/app/types";
 import { useState, MouseEvent, useMemo } from "react";
-import { ROWS_PER_PAGE } from "../../constants";
 import { stableSort, getComparator } from "./helpers";
 import { Order } from "./types";
 
-export default function useTable({
-  rows,
-  page,
-}: {
-  rows: Player[];
-  page: number;
-}) {
+export default function useTable({ rows }: { rows: Player[] }) {
   const [order, setOrder] = useState<Order>("asc");
   const [orderBy, setOrderBy] = useState<keyof Player>("id");
+  const [page, setPage] = useState<number>(0);
 
   const onClickSort = (event: MouseEvent<unknown>, property: keyof Player) => {
     const isAsc = orderBy === property && order === "asc";
@@ -21,13 +15,9 @@ export default function useTable({
   };
 
   const sortedRows = useMemo(
-    () =>
-        stableSort(rows, getComparator(order, orderBy)).slice(
-            page * ROWS_PER_PAGE,
-            page * ROWS_PER_PAGE + ROWS_PER_PAGE,
-        ),
-    [rows, page, order, orderBy, ],
-);
+    () => stableSort(rows, getComparator(order, orderBy)),
+    [rows, page, order, orderBy]
+  );
 
-  return { order, orderBy, sortedRows, onClickSort };
+  return { order, orderBy, sortedRows, page, onClickSort, setPage };
 }
