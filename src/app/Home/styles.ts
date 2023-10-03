@@ -6,7 +6,6 @@ export const container = css`
   width: 100vw;
   height: 100vh;
   display: flex;
-  /* flex-flow: row wrap; */
   direction: ltr;
   overflow: auto;
   flex-direction: column;

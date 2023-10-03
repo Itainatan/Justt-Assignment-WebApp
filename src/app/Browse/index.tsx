@@ -1,13 +1,16 @@
 import { Box } from "@mui/material";
 import SearchField from "@src/common-components/SearchField";
 import useBrowse from "./hooks";
+import Table from './components/table'
+import { headCells } from "./constants";
 
 export default function Browse() {
-    const { setSearch } = useBrowse();
+    const { onSubmit, data } = useBrowse();
 
     return (
         <Box>
-            <SearchField onSubmit={setSearch} placeholder="Browse for characters..." />
+            <SearchField onSubmit={onSubmit} placeholder="Browse for characters..." required={false} />
+            {data && <Table rows={data.results} headers={headCells} total={data.info.count} />}
         </Box>
     );
 }

@@ -4,7 +4,7 @@ import * as styles from './styles';
 import { Props } from './types';
 import useSearchField from './hooks';
 
-export default function SearchField({ placeholder, onSubmit }: Props) {
+export default function SearchField({ placeholder, onSubmit, required = true }: Props) {
     const { register, onClickSubmit } = useSearchField({ onSubmit });
     return (
         <form onSubmit={onClickSubmit} css={styles.container}>
@@ -22,7 +22,7 @@ export default function SearchField({ placeholder, onSubmit }: Props) {
                     ),
                 }}
                 {...register("search", {
-                    required: true,
+                    required: required,
                 })}
             />
             <Button css={styles.submitButton} type="submit">GO</Button>

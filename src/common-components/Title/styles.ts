@@ -5,7 +5,6 @@ export const container = css`
   width: 100%;
   align-content: center;
   display: flex;
-  /* margin-bottom: 60px; */
 `;
 
 

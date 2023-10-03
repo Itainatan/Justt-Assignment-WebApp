@@ -15,7 +15,7 @@ export default function Search() {
                 isLoading ?
                     <CircularProgress />
                     : !!data ?
-                        <PlayerCard player={data}/>
+                        <PlayerCard player={data} />
                         :
                         <>
                             <CardMedia
