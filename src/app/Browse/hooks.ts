@@ -43,5 +43,5 @@ export default function useBrowse() {
     [searchName]
   );
 
-  return { data, isLoading, onSubmit };
+  return { data, isLoading, page, onSubmit, setPage };
 }

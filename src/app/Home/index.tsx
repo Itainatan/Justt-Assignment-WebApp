@@ -21,7 +21,6 @@ export default function Home() {
         <Box css={styles.main}>
           {
             mode === MODE.Browse ? <Browse /> : <Search />
-
           }
         </Box>
       </Box>

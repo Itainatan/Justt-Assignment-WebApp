@@ -1,47 +1,30 @@
-import { Player } from "../types";
+import { HeadCell } from "./components/Table/types";
 
-interface HeadCell {
-    disablePadding: boolean;
-    id: keyof Player;
-    label: string;
-    numeric: boolean;
-}
-
-export const headCells: readonly HeadCell[] = [
-    {
-        id: 'id',
-        numeric: false,
-        disablePadding: true,
-        label: 'Id',
-    },
-    {
-        id: 'name',
-        numeric: true,
-        disablePadding: false,
-        label: 'Name',
-    },
-    {
-        id: 'species',
-        numeric: true,
-        disablePadding: false,
-        label: 'Species',
-    },
-    {
-        id: 'status',
-        numeric: true,
-        disablePadding: false,
-        label: 'Status',
-    },
-    {
-        id: 'origin',
-        numeric: true,
-        disablePadding: false,
-        label: 'Origin',
-    },
-    {
-        id: 'gender',
-        numeric: true,
-        disablePadding: false,
-        label: 'Gender',
-    },
+export const headCells: HeadCell[] = [
+  {
+    id: "id",
+    label: "Id",
+  },
+  {
+    id: "name",
+    label: "Name",
+  },
+  {
+    id: "species",
+    label: "Species",
+  },
+  {
+    id: "status",
+    label: "Status",
+  },
+  {
+    id: "origin",
+    label: "Origin",
+  },
+  {
+    id: "gender",
+    label: "Gender",
+  },
 ];
+
+export const ROWS_PER_PAGE = 20;

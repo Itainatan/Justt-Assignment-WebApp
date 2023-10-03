@@ -1,6 +1,11 @@
+import { Player } from "@src/app/types";
 import { Order } from "./types";
 
-export function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
+export function descendingComparator(
+  a: Player,
+  b: Player,
+  orderBy: keyof Player
+) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
   }
@@ -10,23 +15,22 @@ export function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   return 0;
 }
 
-export function getComparator<Key extends keyof any>(
+export function getComparator(
   order: Order,
-  orderBy: Key
-): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string }
-) => number {
+  orderBy: keyof Player
+): (a: any, b: any) => number {
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-export function stableSort<T>(
-  array: readonly T[],
-  comparator: (a: T, b: T) => number
+export function stableSort(
+  array: readonly Player[],
+  comparator: (a: Player, b: Player) => number
 ) {
-  const stabilizedThis = array.map((el, index) => [el, index] as [T, number]);
+  const stabilizedThis = array.map(
+    (el, index) => [el, index] as [Player, number]
+  );
   stabilizedThis.sort((a, b) => {
     const order = comparator(a[0], b[0]);
     if (order !== 0) {

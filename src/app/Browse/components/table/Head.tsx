@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, TableCell, TableHead, TableRow, TableSortLabel } from '@mui/material';
 import { visuallyHidden } from '@mui/utils';
 import { Player } from '@src/app/types';
-import { Order } from './types';
+import { HeadCell, Order } from './types';
 
 type Props = {
     onRequestSort: (event: React.MouseEvent<unknown>, property: keyof Player) => void;
@@ -22,7 +22,7 @@ export default function Head(props: Props) {
     return (
         <TableHead>
             <TableRow>
-                {headers.map((headCell) => (
+                {headers.map((headCell: HeadCell) => (
                     <TableCell
                         key={headCell.id}
                         align='center'
