@@ -16,7 +16,6 @@ export const input = css`
   background: var(--White, #fff);
   width: 481px;
   height: 46px;
-  color: #a1a1a1;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -26,6 +25,12 @@ export const input = css`
   .MuiOutlinedInput-input {
     height: 20px;
     padding: 13px;
+    color: #4310ae;
+
+    &::placeholder {
+      color: #a1a1a1;
+    }
+   
   }
 `;
 
