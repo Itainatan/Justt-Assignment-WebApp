@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 export const container = css`
   display: flex;
   margin-top: 49px;
+  margin-bottom: 49px;
   width: 100%;
   column-gap: 50px;
 `;
