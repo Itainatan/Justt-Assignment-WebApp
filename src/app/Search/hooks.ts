@@ -17,7 +17,7 @@ export default function useSearch() {
     try {
       setIsLoading(true);
 
-      const { data }: any = await axios.get(`${API_URL}/character/${id}`);
+      const { data } = await axios.get(`${API_URL}/character/${id}`);
 
       setData(data);
 

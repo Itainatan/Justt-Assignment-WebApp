@@ -8,17 +8,17 @@ import {
 } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
 import { Player } from "@src/app/types";
-// import { HeadCell, Order } from "../Table/types";
 import * as styles from "./styles";
+import { Order, HeadCell } from "../DataTable/types";
 
 type Props = {
   onRequestSort: (
     event: React.MouseEvent<unknown>,
     property: keyof Player
   ) => void;
-  order: any;
+  order: Order;
   orderBy: string;
-  headers: any;
+  headers: HeadCell[];
 };
 
 export default function Head(props: Props) {
@@ -31,7 +31,7 @@ export default function Head(props: Props) {
   return (
     <TableHead>
       <TableRow>
-        {headers.map((headCell: any) => (
+        {headers.map((headCell: HeadCell) => (
           <TableCell
             key={headCell.id}
             align="center"

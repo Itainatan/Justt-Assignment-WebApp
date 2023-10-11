@@ -17,7 +17,7 @@ export default function useBrowse() {
     try {
       setIsLoading(true);
 
-      const { data }: any = await axios.get(
+      const { data } = await axios.get(
         `${API_URL}/character/?page=${page}${
           searchName && `&name=${searchName}`
         }`

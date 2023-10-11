@@ -1,6 +1,6 @@
-// import { HeadCell } from "./components/Table/types";
+import { HeadCell } from "./components/DataTable/types";
 
-export const headCells: any[] = [
+export const headCells: HeadCell[] = [
   {
     id: "id",
     label: "Id",
