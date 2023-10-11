@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import SearchField from "@src/common-components/SearchField";
 import useBrowse from "./hooks";
 import { headCells } from "./constants";
-import Table from "./components/Table";
+import DataTable from "./components/DataTable";
 
 export default function Browse() {
   const { data, setPage, onSubmit } = useBrowse();
@@ -15,7 +15,7 @@ export default function Browse() {
         required={false}
       />
       {data && (
-        <Table
+        <DataTable
           rows={data.results}
           headers={headCells}
           total={data.info.count}
