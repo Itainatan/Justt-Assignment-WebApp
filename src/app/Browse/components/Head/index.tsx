@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
 import { Player } from "@src/app/types";
-import { HeadCell, Order } from "../Table/types";
+// import { HeadCell, Order } from "../Table/types";
 import * as styles from "./styles";
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
     event: React.MouseEvent<unknown>,
     property: keyof Player
   ) => void;
-  order: Order;
+  order: any;
   orderBy: string;
   headers: any;
 };
@@ -31,7 +31,7 @@ export default function Head(props: Props) {
   return (
     <TableHead>
       <TableRow>
-        {headers.map((headCell: HeadCell) => (
+        {headers.map((headCell: any) => (
           <TableCell
             key={headCell.id}
             align="center"
