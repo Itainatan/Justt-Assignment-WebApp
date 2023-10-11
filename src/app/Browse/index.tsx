@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import SearchField from "@src/common-components/SearchField";
 import useBrowse from "./hooks";
-import Table from "./components/Table";
+import Table from "./components/Table/index";
 import { headCells } from "./constants";
 
 export default function Browse() {
