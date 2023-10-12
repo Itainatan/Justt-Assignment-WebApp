@@ -1,6 +1,8 @@
-## Justt home assignment 
+## Rick And Morty
 
-💻 Built with React | TypeScript | MUI | CSS Emotion .
+👉🏽 [Demo](https://justt-assignment-webapp.pages.dev/)
+
+💻 Built with React Hooks | TypeScript | MUI | CSS Emotion .
 
 To run the application - 
 1. npm install
